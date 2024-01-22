@@ -2,14 +2,13 @@ from datetime import datetime
 import pytz
 import logging
 
-
+logging.basicConfig(filename="todo.log", encoding='utf-8', level=logging.DEBUG)
 
 timezone_paris = pytz.timezone('Europe/Paris')
 timezone_reunion = pytz.timezone('Indian/Reunion')
 
 
 def get_date_formatted(timezone):
-    logging.basicConfig(filename=None, encoding='utf-8', level=logging.DEBUG)
     logging.info(f"Lancement du traitement")
     logging.debug(f"Demande d'heure sur le timezone : {timezone}")
     
